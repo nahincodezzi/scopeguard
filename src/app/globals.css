@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F7F7F5;
+  --surface: #FFFFFF;
+  --surface-2: #FAFAF9;
+  --ink: #14161B;
+  --text-2: #3D424C;
+  --muted: #5F6672;
+  --border: #E7E8EB;
+  --border-soft: #EFEFED;
+  --accent: #4338CA;
+  --accent-soft: #EEF0FF;
+
+  /* Status Tokens */
+  --status-in-text: #0F7A4A;
+  --status-in-bg: #E8F6EE;
+  --status-in-border: #BFE6CF;
+  --status-in-dot: #22A06B;
+
+  --status-grey-text: #92560A;
+  --status-grey-bg: #FFF5E0;
+  --status-grey-border: #F6D9A0;
+  --status-grey-dot: #F5A524;
+
+  --status-out-text: #B42318;
+  --status-out-bg: #FEF0EE;
+  --status-out-border: #F8C9C2;
+  --status-out-dot: #D92D20;
+
+  --status-approved-text: #1D4ED8;
+  --status-approved-bg: #EAF1FE;
+  --status-approved-border: #C7D7FB;
+  --status-approved-dot: #3B82F6;
+
+  --status-declined-text: #5F6672;
+  --status-declined-bg: #F4F4F2;
+  --status-declined-border: #E7E8EB;
+  --status-declined-dot: #9AA0AA;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Geist", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular nums and mono typography for figures */
+.font-mono-nums {
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Standard Calm Ledger Focus Ring */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Card base styling */
+.ledger-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.ledger-input {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 14px;
+  transition: border-color 0.15s ease;
+}
+
+@media (max-width: 640px) {
+  .ledger-input {
+    font-size: 16px; /* Prevents iOS auto-zoom */
+  }
+}
+
+.ledger-input:focus {
+  border-color: var(--accent);
+}
+
+.btn-primary {
+  background-color: var(--ink);
+  color: #FFFFFF;
+  border-radius: 10px;
+  height: 42px;
+  font-weight: 500;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  transition: opacity 0.15s ease;
+}
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--ink);
+  border: 1px solid #DCDDE1;
+  border-radius: 10px;
+  height: 42px;
+  font-weight: 500;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  transition: background-color 0.15s ease;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--surface-2);
+}
+
+.btn-ghost {
+  color: var(--text-2);
+  background: transparent;
+  border-radius: 10px;
+  height: 38px;
+  font-weight: 500;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  transition: background-color 0.15s ease;
+}
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--surface-2);
+  color: var(--ink);
+}
+
+/* Badge classes adhering strictly to §1 Semantic status colors */
+.badge-in-scope, .badge-paid {
+  color: var(--status-in-text);
+  background-color: var(--status-in-bg);
+  border: 1px solid var(--status-in-border);
+}
+.badge-grey-area, .badge-revision, .badge-pending {
+  color: var(--status-grey-text);
+  background-color: var(--status-grey-bg);
+  border: 1px solid var(--status-grey-border);
+}
+.badge-out-of-scope {
+  color: var(--status-out-text);
+  background-color: var(--status-out-bg);
+  border: 1px solid var(--status-out-border);
+}
+.badge-approved {
+  color: var(--status-approved-text);
+  background-color: var(--status-approved-bg);
+  border: 1px solid var(--status-approved-border);
+}
+.badge-declined, .badge-expired, .badge-withdrawn {
+  color: var(--status-declined-text);
+  background-color: var(--status-declined-bg);
+  border: 1px solid var(--status-declined-border);
+}

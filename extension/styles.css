@@ -1,0 +1,146 @@
+:root {
+  --bg: #F7F7F5;
+  --surface: #FFFFFF;
+  --surface-2: #FAFAF9;
+  --ink: #14161B;
+  --text-2: #3D424C;
+  --muted: #5F6672;
+  --border: #E7E8EB;
+  --border-soft: #EFEFED;
+  --accent: #4338CA;
+  --accent-soft: #EEF0FF;
+
+  --status-in-text: #0F7A4A;
+  --status-in-bg: #E8F6EE;
+  --status-in-border: #BFE6CF;
+
+  --status-grey-text: #92560A;
+  --status-grey-bg: #FFF5E0;
+  --status-grey-border: #F6D9A0;
+
+  --status-out-text: #B42318;
+  --status-out-bg: #FEF0EE;
+  --status-out-border: #F8C9C2;
+}
+
+/* Gmail Toolbar injected button */
+.scopeguard-gmail-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #14161B;
+  color: #FFFFFF !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  margin-left: 8px;
+  vertical-align: middle;
+  transition: opacity 0.15s ease;
+  z-index: 9999;
+}
+.scopeguard-gmail-btn:hover {
+  opacity: 0.9;
+}
+
+/* 400px Injected Sidebar */
+#scopeguard-sidebar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -4px 0 24px rgba(20, 22, 27, 0.12);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  transform: translateX(100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#scopeguard-sidebar-container.open {
+  transform: translateX(0);
+}
+
+.sg-sidebar-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+}
+
+.sg-sidebar-body {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.sg-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.sg-badge-out {
+  color: var(--status-out-text);
+  background: var(--status-out-bg);
+  border: 1px solid var(--status-out-border);
+}
+.sg-badge-in {
+  color: var(--status-in-text);
+  background: var(--status-in-bg);
+  border: 1px solid var(--status-in-border);
+}
+.sg-badge-grey {
+  color: var(--status-grey-text);
+  background: var(--status-grey-bg);
+  border: 1px solid var(--status-grey-border);
+}
+
+.sg-btn-primary {
+  width: 100%;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  height: 38px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.sg-btn-primary:hover {
+  opacity: 0.92;
+}
+
+.sg-btn-secondary {
+  width: 100%;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid #DCDDE1;
+  border-radius: 8px;
+  height: 36px;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.sg-btn-secondary:hover {
+  background: var(--surface-2);
+}

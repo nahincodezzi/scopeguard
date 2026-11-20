@@ -1,0 +1,361 @@
+{
+  "profile": {
+    "agency_name": "Apex Studio",
+    "logo_url": "",
+    "brand_color": "#4338CA",
+    "reply_email": "hello@apexstudio.design",
+    "timezone": "Asia/Dhaka",
+    "allow_pay_on_invoice": true,
+    "stripe_account_id": "acct_1N0xTEST98234",
+    "stripe_connected": true,
+    "plan": "pro",
+    "stripe_customer_id": "cus_pro_scopeguard",
+    "subscription_status": "active",
+    "api_token": "sg_live_a89f2b740e69123c4a20b9e847cd9",
+    "onboarding_completed": true
+  },
+  "projects": [
+    {
+      "id": "proj-dawn-shopify",
+      "title": "Shopify Dawn Storefront & SEO",
+      "client_name": "Sara Miller",
+      "client_email": "sara@bloomorganics.com",
+      "client_company": "Bloom Organics",
+      "hourly_rate": 65,
+      "rate_source": "contract",
+      "allowed_revisions": 2,
+      "revisions_used": 0,
+      "revision_scope": "home and product page mockups",
+      "created_at": "2026-11-01T10:00:00Z"
+    },
+    {
+      "id": "proj-zenith-brand",
+      "title": "Zenith SaaS Landing & Portal",
+      "client_name": "Marcus Vance",
+      "client_email": "marcus@zenithai.io",
+      "client_company": "Zenith AI",
+      "hourly_rate": 85,
+      "rate_source": "contract",
+      "allowed_revisions": 2,
+      "revisions_used": 1,
+      "revision_scope": "Figma UI prototype & landing page",
+      "created_at": "2026-10-25T14:30:00Z"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "ctr-dawn-01",
+      "project_id": "proj-dawn-shopify",
+      "version": 1,
+      "file_name": "Bloom_Organics_SOW_Signed_v1.pdf",
+      "parsed_at": "2026-11-01T10:15:00Z",
+      "is_active": true,
+      "summary": "Shopify store setup on Dawn theme with 5 core pages, 40 product CSV import, retail checkout, Mailchimp signup, basic SEO, and 2 design revision rounds on home and product pages. All custom B2B, multi-language, multi-currency, and maintenance are excluded.",
+      "included_deliverables": [
+        "Shopify store on Dawn theme",
+        "5 pages (Home, Shop, Product, About, Contact)",
+        "40 products CSV import",
+        "Shopify Payments retail checkout",
+        "Mailchimp footer signup",
+        "Basic SEO & meta descriptions"
+      ],
+      "explicit_exclusions": [
+        "Copywriting",
+        "Photography",
+        "Wholesale/B2B pricing or checkout",
+        "Multi-language (e.g. French store)",
+        "Multi-currency (e.g. CAD pricing)",
+        "Ongoing maintenance"
+      ],
+      "revision_limit": 2,
+      "revision_scope": "home and product page mockups",
+      "hourly_rate": 65,
+      "fixed_fee": 3600,
+      "currency": "USD",
+      "timeline": "3-4 weeks",
+      "clauses": [
+        {
+          "id": "§1",
+          "text": "Included deliverables: Shopify store on Dawn theme, 5 pages (Home, Shop, Product, About, Contact), 40 products CSV import, Shopify Payments retail checkout, Mailchimp footer signup, and basic SEO."
+        },
+        {
+          "id": "§2",
+          "text": "Revision limit: 2 design revision rounds on Home and Product pages. Additional revision rounds or revisions on other pages are billed at the contract hourly rate."
+        },
+        {
+          "id": "§3",
+          "text": "Explicit exclusions: Copywriting, custom photography, wholesale/B2B pricing or wholesale checkout, multi-language localization (e.g. French/Spanish), multi-currency (e.g. CAD, EUR), and ongoing maintenance."
+        },
+        {
+          "id": "§4",
+          "text": "Additional scope: Any work outside Section 1 and Section 2 will be documented in a Change Order at $65/hr."
+        }
+      ]
+    }
+  ],
+  "scope_checks": [
+    {
+      "id": "chk-001",
+      "project_id": "proj-dawn-shopify",
+      "message": "Set up the site in French, CAD pricing for Canada, and a wholesale login for cafes with 20% off.",
+      "source": "email",
+      "status": "OUT_OF_SCOPE",
+      "confidence_score": 96,
+      "reasoning": "The requested additions match explicit exclusions in Section 3 of the SOW. These items require 27 hours of custom work outside the baseline agreement.",
+      "line_items": [
+        {
+          "request": "French store setup & localization",
+          "work_description": "Configure multi-language store, locale switcher, and French translation assets",
+          "status": "OUT_OF_SCOPE",
+          "clause_id": "§3",
+          "clause_text": "Explicit exclusions: wholesale/B2B pricing, multi-language, multi-currency.",
+          "estimated_hours": 8
+        },
+        {
+          "request": "CAD currency pricing for Canada",
+          "work_description": "Set up multi-currency market for Canada, CAD price rounding, and checkout testing",
+          "status": "OUT_OF_SCOPE",
+          "clause_id": "§3",
+          "clause_text": "Explicit exclusions: wholesale/B2B pricing, multi-language, multi-currency.",
+          "estimated_hours": 6
+        },
+        {
+          "request": "Wholesale B2B login & 20% discount portal",
+          "work_description": "Implement wholesale customer tagging, restricted B2B catalog access, and 20% tier pricing",
+          "status": "OUT_OF_SCOPE",
+          "clause_id": "§3",
+          "clause_text": "Explicit exclusions: wholesale/B2B pricing, multi-language, multi-currency.",
+          "estimated_hours": 13
+        }
+      ],
+      "counts_as_revision": false,
+      "revision_number": null,
+      "estimated_hours": 27,
+      "suggested_price": 1755,
+      "change_order_title": "French store, CAD pricing & wholesale login",
+      "timeline_impact": "about 1-2 weeks",
+      "polite_reply_draft": "Hi Sara,\n\nThanks for sending these over! The ideas for French store, CAD pricing & wholesale login sound great and will make the store really stand out.\n\nBecause this is outside our initial agreed scope (§3 exclusions), we've put together a quick change order for 27 hours ($1,755 at our contract rate of $65/hr, adds about 1-2 weeks).\n\nYou can review the full breakdown and approve it right here:\n{{APPROVAL_LINK}}\n\nHappy to jump on a quick call if you have any questions!\n\nWarm regards,\nShopify Dawn Storefront & SEO Team",
+      "reply_tone": "friendly",
+      "user_feedback": null,
+      "model": "ScopeGuard SOW Analyzer v2.0 (Gemini 1.5 Pro Hybrid)",
+      "created_at": "2026-11-20T08:39:20.698Z"
+    }
+  ],
+  "change_orders": [
+    {
+      "id": "co-v1mnnzkmoc",
+      "number": "CO-0042",
+      "token": "5if2apcopaajqc1moryn1qjdencq65t9",
+      "project_id": "proj-dawn-shopify",
+      "title": "French store, CAD pricing & wholesale login",
+      "line_items": [
+        {
+          "request": "French store setup & localization",
+          "work_description": "Configure multi-language store, locale switcher, and French translation assets",
+          "estimated_hours": 8,
+          "fee": 520,
+          "clause_id": "§3"
+        },
+        {
+          "request": "CAD currency pricing for Canada",
+          "work_description": "Set up multi-currency market for Canada, CAD price rounding, and checkout testing",
+          "estimated_hours": 6,
+          "fee": 390,
+          "clause_id": "§3"
+        },
+        {
+          "request": "Wholesale B2B login & 20% discount portal",
+          "work_description": "Implement wholesale customer tagging, restricted B2B catalog access, and 20% tier pricing",
+          "estimated_hours": 10,
+          "fee": 650,
+          "clause_id": "§3"
+        }
+      ],
+      "total_hours": 24,
+      "total_fee": 1560,
+      "hourly_rate": 65,
+      "timeline_impact": "about 1 week",
+      "client_request_quote": "Set up the site in French, CAD pricing for Canada, and a wholesale login for cafes with 20% off.",
+      "agreement_clause_quote": "Section 3 explicit exclusions: multi-language, multi-currency, wholesale.",
+      "payment_terms": "full",
+      "expires_at": "2026-12-04T13:40:13.932Z",
+      "status": "PAID",
+      "created_at": "2026-11-20T13:40:13.932Z",
+      "viewed_at": "2026-11-20T13:40:13.935Z",
+      "paid_at": "2026-11-20T13:40:13.938Z",
+      "approved_by_name": "Sara Miller",
+      "approved_ip": "192.168.1.10",
+      "approved_user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)",
+      "stripe_payment_intent_id": "pi_test_4242_success"
+    },
+    {
+      "id": "co-0041-dawn",
+      "number": "CO-0041",
+      "token": "o4y77cujyzy1dlrt10gy1u2rkw247wz1",
+      "project_id": "proj-dawn-shopify",
+      "title": "French store, CAD pricing & wholesale login",
+      "line_items": [
+        {
+          "request": "French store setup & localization",
+          "work_description": "Configure multi-language store, locale switcher, and French translation assets",
+          "estimated_hours": 8,
+          "fee": 520,
+          "clause_id": "§3"
+        },
+        {
+          "request": "CAD currency pricing for Canada",
+          "work_description": "Set up multi-currency market for Canada, CAD price rounding, and checkout testing",
+          "estimated_hours": 6,
+          "fee": 390,
+          "clause_id": "§3"
+        },
+        {
+          "request": "Wholesale B2B login & 20% discount portal",
+          "work_description": "Implement wholesale customer tagging, restricted B2B catalog access, and 20% tier pricing",
+          "estimated_hours": 13,
+          "fee": 845,
+          "clause_id": "§3"
+        }
+      ],
+      "total_hours": 27,
+      "total_fee": 1755,
+      "hourly_rate": 65,
+      "timeline_impact": "about 1-2 weeks",
+      "client_request_quote": "Set up the site in French, CAD pricing for Canada, and a wholesale login for cafes with 20% off.",
+      "agreement_clause_quote": "Section 3 explicit exclusions: Copywriting, custom photography, wholesale/B2B pricing or wholesale checkout, multi-language localization, multi-currency.",
+      "payment_terms": "full",
+      "expires_at": "2026-12-04T13:39:20.697Z",
+      "status": "PENDING",
+      "created_at": "2026-11-20T09:39:20.698Z"
+    },
+    {
+      "id": "co-0040-paid",
+      "number": "CO-0040",
+      "token": "myrh3t14bcw3hiz13jk31zjaa0chl5dh",
+      "project_id": "proj-zenith-brand",
+      "title": "SOC2 Compliance Security Badge & Whitepaper Download",
+      "line_items": [
+        {
+          "request": "Security page & badge integration",
+          "work_description": "Design and implement SOC2 security trust hub and dynamic PDF gated lead form",
+          "estimated_hours": 10,
+          "fee": 850,
+          "clause_id": "§3"
+        }
+      ],
+      "total_hours": 10,
+      "total_fee": 850,
+      "hourly_rate": 85,
+      "timeline_impact": "3 days",
+      "client_request_quote": "Can we add a SOC2 trust badge and gated whitepaper download form on the security page?",
+      "agreement_clause_quote": "Excluded: Gated marketing workflows, custom CMS lead integrations.",
+      "payment_terms": "full",
+      "expires_at": "2026-11-30T13:39:20.698Z",
+      "status": "PAID",
+      "paid_at": "2026-11-18T13:39:20.698Z",
+      "approved_by_name": "Marcus Vance",
+      "approved_ip": "192.168.1.45",
+      "approved_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "stripe_payment_intent_id": "pi_3N9238TestPaymentIntent",
+      "created_at": "2026-11-16T13:39:20.698Z"
+    }
+  ],
+  "change_order_events": [
+    {
+      "id": "evt-01",
+      "change_order_id": "co-0041-dawn",
+      "type": "created",
+      "meta": {
+        "by": "Apex Studio"
+      },
+      "created_at": "2026-11-20T09:39:20.698Z"
+    },
+    {
+      "id": "evt-02",
+      "change_order_id": "co-0040-paid",
+      "type": "created",
+      "meta": {},
+      "created_at": "2026-11-16T13:39:20.698Z"
+    },
+    {
+      "id": "evt-03",
+      "change_order_id": "co-0040-paid",
+      "type": "approved",
+      "meta": {
+        "name": "Marcus Vance",
+        "ip": "192.168.1.45"
+      },
+      "created_at": "2026-11-18T12:39:20.698Z"
+    },
+    {
+      "id": "evt-04",
+      "change_order_id": "co-0040-paid",
+      "type": "paid",
+      "meta": {
+        "stripe_intent": "pi_3N9238TestPaymentIntent",
+        "amount": 850
+      },
+      "created_at": "2026-11-18T13:39:20.699Z"
+    },
+    {
+      "id": "evt-f2umnjni",
+      "change_order_id": "co-v1mnnzkmoc",
+      "type": "created",
+      "meta": {
+        "title": "French store, CAD pricing & wholesale login",
+        "fee": 1560
+      },
+      "created_at": "2026-11-20T13:40:13.932Z"
+    },
+    {
+      "id": "evt-ykuxl766",
+      "change_order_id": "co-v1mnnzkmoc",
+      "type": "viewed",
+      "meta": {
+        "ip": "192.168.1.10"
+      },
+      "created_at": "2026-11-20T13:40:13.936Z"
+    },
+    {
+      "id": "evt-jmzrywf3",
+      "change_order_id": "co-v1mnnzkmoc",
+      "type": "approved",
+      "meta": {
+        "name": "Sara Miller",
+        "ip": "192.168.1.10"
+      },
+      "created_at": "2026-11-20T13:40:13.939Z"
+    },
+    {
+      "id": "evt-iai6dqd1",
+      "change_order_id": "co-v1mnnzkmoc",
+      "type": "paid",
+      "meta": {
+        "intent": "pi_test_4242_success",
+        "amount": 1560
+      },
+      "created_at": "2026-11-20T13:40:13.941Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "type": "paid",
+      "title": "Change order paid ($850)",
+      "message": "Marcus Vance paid CO-0040 via Stripe Checkout.",
+      "change_order_id": "co-0040-paid",
+      "read": false,
+      "created_at": "2026-11-18T13:39:20.698Z"
+    },
+    {
+      "id": "notif-2",
+      "type": "created",
+      "title": "Change order CO-0041 created",
+      "message": "CO-0041 for $1,755 is pending client approval.",
+      "change_order_id": "co-0041-dawn",
+      "read": false,
+      "created_at": "2026-11-20T09:39:20.698Z"
+    }
+  ],
+  "next_co_number": 43
+}
